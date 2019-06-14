@@ -1,0 +1,30 @@
+{
+  "name": "angular-ssapi",
+  "version": "0.1.0",
+  "description": "Just an AngularJS factory to assist with AJAX calls to SearchSpring's API.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular1x",
+    "searchspring"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mghweb/angular-ssapi"
+  },
+  "author": "Max Hegler",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
