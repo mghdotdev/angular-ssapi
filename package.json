@@ -1,6 +1,6 @@
 {
   "name": "angular-ssapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Just an AngularJS factory to assist with AJAX calls to SearchSpring's API.",
   "main": "dist/angular-ssapi.js",
   "scripts": {
