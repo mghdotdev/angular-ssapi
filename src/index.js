@@ -8,7 +8,7 @@
 (function( window, angular, undefined ) {
 
 	var ngModule = angular.module('SSAPI', []);
-	ngModule.config(function( $httpProvider, $sceDelegateProvider ) {
+	ngModule.config(['$httpProvider', '$sceDelegateProvider', function( $httpProvider, $sceDelegateProvider ) {
 
 		$sceDelegateProvider.resourceUrlWhitelist([
 			'self',
@@ -17,7 +17,7 @@
 
 		$httpProvider.useApplyAsync( true );
 
-	});
+	}]);
 	ngModule.factory('SSAPI', ['$http', function( $http ) {
 
 		var self = this;

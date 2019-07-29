@@ -10,7 +10,7 @@ module.exports = {
 	target: 'web',
 	output: {
 		path: path.resolve( __dirname, 'dist' ),
-		filename: 'angular-ssapi.min.js'
+		filename: 'angular-ssapi.js'
 	},
 	optimization: {
 		minimizer: [
