@@ -15,7 +15,11 @@
 			'https://**.searchspring.net/**',
 		]);
 
-		$httpProvider.useApplyAsync( true );
+		if ( angular.version.major == 1 && angular.version.minor > 2 ) {
+
+			$httpProvider.useApplyAsync( true );
+
+		}
 
 	}]);
 	ngModule.factory('SSAPI', ['$http', function( $http ) {
