@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * AngularJS module for making requests to the SearchSpring API
  * Includes two endpoints:
@@ -13,6 +14,7 @@
 		$sceDelegateProvider.resourceUrlWhitelist([
 			'self',
 			'https://**.searchspring.net/**',
+			'https://**.searchspring.io/**',
 		]);
 
 		if ( angular.version.major == 1 && angular.version.minor > 2 ) {
@@ -32,7 +34,7 @@
 
 			options: {
 				method: 'GET',
-				url: 'https://api.searchspring.net/api/search/search.json',
+				url: '',
 				params: {
 					siteId: undefined,
 					resultsFormat: 'native'
@@ -67,9 +69,9 @@
 
 			options: {
 				method: 'jsonp',
-				url: 'https://autocomplete2.searchspring.net',
+				url: '',
 				params: {
-					pubId: undefined,
+					siteId: undefined,
 					query: ''
 				},
 				headers: {
@@ -101,9 +103,11 @@
 
 			self.Search.options.params.siteId = siteId;
 			self.Search.options.params.userId = userId;
+			self.Search.options.url = `https://${siteId}.a.searchspring.io/api/search/search.json`;
 
-			self.Autocomplete.options.params.pubId = siteId;
+			self.Autocomplete.options.params.siteId = siteId;
 			self.Autocomplete.options.params.userId = userId;
+			self.Autocomplete.options.url = `https://${siteId}.a.searchspring.io/api/suggest/legacy`;
 
 			if ( angular.version.major >= 1 && angular.version.minor >= 6 ) {
 
